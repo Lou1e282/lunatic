@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lunatic Webzine</title>
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<script>
+  document.getElementById('translate-toggle').addEventListener('click', () => {
+    fetch('json/translation.json')
+      .then(response => response.json())
+      .then(data => {
+        document.title = data.title;
+        document.getElementById('theme-toggle').textContent = data.themeToggle;
+
+        const navLabels = ['home', 'articles', 'interviews', 'events', 'rip', 'playlists', 'info'];
+        document.querySelectorAll('.main-nav ul li a').forEach((link, i) => {
+          const key = navLabels[i];
+          link.textContent = data.nav[key];
+        });
+
+        document.querySelector('.search-box h3').textContent = data.search.title;
+        document.querySelector('.search-box input').placeholder = data.search.placeholder;
+        const select = document.querySelector('.search-box select');
+        select.options[0].textContent = data.search.categories.all;
+        select.options[1].textContent = data.search.categories.albums;
+        select.options[2].textContent = data.search.categories.compilations;
+        select.options[3].textContent = data.search.categories.dvds;
+        select.options[4].textContent = data.search.categories.zines;
+        select.options[5].textContent = data.search.categories.interviews;
+        document.querySelector('.search-box button').textContent = data.search.button;
+
+        document.querySelector('.categories h3').textContent = data.categories.title;
+        const catItems = document.querySelectorAll('.categories ul li a');
+        catItems[0].textContent = data.categories.articles;
+        catItems[1].textContent = data.categories.interviews;
+        catItems[2].textContent = data.categories.events;
+        catItems[3].textContent = data.categories.articlesCount;
+        catItems[4].textContent = data.categories.photos;
+        catItems[5].textContent = data.categories.playlists;
+        catItems[6].textContent = data.categories.rip;
+
+        document.querySelector('.latest-updates h3').textContent = data.latestUpdates.title;
+        const updates = document.querySelectorAll('.latest-updates ul li a');
+        updates[0].textContent = data.latestUpdates.update1;
+        updates[1].textContent = data.latestUpdates.update2;
+        updates[2].textContent = data.latestUpdates.update3;
+
+        const footer = document.querySelector('.site-footer p');
+        footer.innerHTML = `
+          ${data.footer.copyright}
+          | <a href="#">${data.footer.privacyPolicy}</a>
+          | <a href="#">${data.footer.cookieSettings}</a>
+        `;
+      });
+  });
+</script>
+
+
+
+<body>
+
+  <!-- Top Banner / Header -->
+  <header class="site-header">
+    <!-- Replace this with your own banner or logo image -->
+    <img src="img/alflfendsd.jpg" alt="alflfends" class="header-img">    
+    <img src="img/lunaticrb.jpg" alt="Darkside Logo" class="site-logo">
+    <button id="translate-toggle">Translate</button>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html" onclick="location.reload()">Home</a></li>
+      <li><a href="#">Articles</a></li>
+      <li><a href="#">Interviews</a></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#">RIP</a></li>
+      <li><a href="#">Playlists</a></li>
+      <li><a href="#">Info</a></li>
+      
+    </ul>
+  </nav>
+
+  <!-- Main Content Wrapper -->
+  <div class="content-wrapper">
+
+    <!-- Sidebar / Left Column -->
+    <aside class="sidebar">
+      <!-- Search Box -->
+      <div class="search-box">
+        <h3>Search</h3>
+        <input type="text" placeholder="Search...">
+        <select>
+          <option value="all">All categories</option>
+          <option value="albums">Articles</option>
+          <option value="compilations">Interviews</option>
+          <option value="dvds">Events</option>
+          <option value="zines">Photos</option>
+          <option value="interviews">Interviews</option>
+          <!-- more categories here -->
+        </select>
+        <button>Go!</button>
+      </div>
+
+      <!-- Categories List -->
+      <div class="categories">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="articles.html">Articles</a></li>
+
+          <!-- in progress -->
+          <li><a href="interviews.html">Interviews</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="articles.html">Articles (34)</a></li>
+          <li><a href="photos.html">Photos</a></li>
+          <li><a href="playlists.html">Playlists (23)</a></li>
+          <li><a href="rip.html">RIP (xxx)</a></li> 
+        </ul>
+      </div>
+      
+
+      <!-- Latest Updates (Optional) -->
+      <div class="latest-updates">
+        <h3>Latest Updates</h3>
+        <ul>
+          <li><a href="#">Mar 18, 2025 - New Interview Posted</a></li>
+          <li><a href="#">Mar 17, 2025 - Album Review</a></li>
+          <li><a href="#">Mar 15, 2025 - Tourdates Updated</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content / Right Column -->
+    <main class="main-content" id="main-content">
+        
+      <!-- Add more news posts here -->
+    </main>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>
+      &copy; 2025 Lunatic Webzine. All rights reserved. 
+      | <a href="#">Privacy Policy</a> | <a href="#">Cookie Settings</a>
+    </p>
+  </footer>
+
+  <!-- loading content -->
+  <script src="js/loadContent.js"></script>
+  <script>
+    loadContent('articles/articlelist.html');
+  </script>
+
+</body>
+</html>
