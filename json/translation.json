@@ -1,0 +1,48 @@
+{
+    "title": "疯狂电子杂志",
+    "themeToggle": "切换主题",
+    "nav": {
+      "home": "首页",
+      "articles": "文章",
+      "interviews": "访谈",
+      "events": "活动",
+      "rip": "纪念",
+      "playlists": "播放列表",
+      "info": "信息"
+    },
+    "search": {
+      "title": "搜索",
+      "placeholder": "搜索...",
+      "categories": {
+        "all": "所有分类",
+        "albums": "文章",
+        "compilations": "访谈",
+        "dvds": "活动",
+        "zines": "照片",
+        "interviews": "访谈"
+      },
+      "button": "搜索"
+    },
+    "categories": {
+      "title": "分类",
+      "articles": "文章",
+      "interviews": "访谈",
+      "events": "活动",
+      "articlesCount": "文章 (34)",
+      "photos": "照片",
+      "playlists": "播放列表 (23)",
+      "rip": "纪念 (xxx)"
+    },
+    // "latestUpdates": {
+    //   "title": "最新更新",
+    //   "update1": "2025年3月18日 - 新访谈已发布",
+    //   "update2": "2025年3月17日 - 专辑评论",
+    //   "update3": "2025年3月15日 - 巡演日期已更新"
+    // },
+    "footer": {
+      "copyright": "© 2025 疯狂电子杂志。保留所有权利。",
+      "privacyPolicy": "隐私政策",
+      "cookieSettings": "Cookie 设置"
+    }
+  }
+  

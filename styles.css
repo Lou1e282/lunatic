@@ -1,0 +1,274 @@
+/* Basic CSS Reset */
+@font-face {
+    font-family: 'deicide'; /* Choose any name */
+    src: url('font/CloisterBlack.ttf') format('opentype'); /* Path to the font file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* Container Wrapper */
+.container {
+    max-width: 1200px;  /* Adjust width as needed */
+    margin: 20px auto;  /* Center the container */
+    padding: 10px;
+    border: 1px solid #ccc; /* 1px border */
+    background-color: #000; /* Matches the dark mode */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  /* Body Styles */
+  body {
+    background-color: #000;           /* Black background */
+    color: #ccc;                      /* Light gray text color */
+    /* font-family: 'Crimson Text', serif;  /* Example Google Font */
+    line-height: 1.6;
+    overflow: hidden; 
+  }
+  
+  /* Header / Banner */
+  .site-header {
+    background-color: #000;
+    display: flex;
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    padding: 0 1rem;
+    border-bottom: 2px solid #666;
+}
+
+  
+  .site-logo {
+    max-width: 300px;
+    width: 100%;
+  }
+
+  .header-img{
+    max-width: 300px;
+    width: 100%; 
+    justify-content: flex-start; 
+    display: block; 
+  }
+  
+  /* Navigation Bar */
+  .main-nav {
+    background-color: #111;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+  }
+  
+  .main-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .main-nav li {
+    margin: 0;
+  }
+  
+  .main-nav a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #bbb;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'deicide'; 
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .main-nav a:hover {
+    background-color: #222;
+    color: #fff;
+  }
+  
+  /* Content Wrapper */
+  .content-wrapper {
+    display: flex;
+    padding: 1rem;
+    max-width: 1300px;
+    margin: 0 auto;
+    background-image: url('img/backblack.jpg'); /* Replace with actual image path */
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+
+  }
+  
+  /* Sidebar Styles */
+  .sidebar {
+    width: 25%;
+    background-color: #111;
+    border-right: 1px solid #444;
+    padding: 1rem;
+  }
+  
+  .sidebar h3 {
+    margin-bottom: 0.5rem;
+    font-family: 'deicide'; 
+    color: #fff;
+  }
+  
+  .search-box input,
+  .search-box select {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    background-color: #222;
+    border: 1px solid #444;
+    color: #ccc;
+  }
+  
+  .search-box button {
+    width: 100%;
+    background-color: #333;
+    border: 1px solid #444;
+    color: #ccc;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .search-box button:hover {
+    background-color: #444;
+  }
+  
+  .categories,
+  .latest-updates {
+    margin-top: 1.5rem;
+  }
+  
+  .categories ul,
+  .latest-updates ul {
+    list-style: none;
+  }
+  
+  .categories li,
+  .latest-updates li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .categories a,
+  .latest-updates a {
+    color: #ccc;
+    text-decoration: none;
+  }
+  
+  .categories a:hover,
+  .latest-updates a:hover {
+    color: #fff;
+  }
+  
+  /* Main Content Styles */
+  .main-content {
+    width: 75%;
+    padding: 1rem;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    box-sizing: border-box;
+    max-width: 100%;            /* prevent child overflow */
+    overflow-x: hidden;         /* hide horizontal overflow */
+    
+  }
+  
+  .main-content h2 {
+    font-size: 1.5rem;
+    font-family: 'deicide'; 
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .main-content h4 {
+    font-size: 1rem;
+    font-family: 'deicide'; 
+    margin-bottom: 0.5rem;
+    color: #aaa;
+  }
+
+  .main-content h4 a{
+    text-decoration: none;    /* clean-link */ 
+    color: inherit;
+  }
+
+  .clean-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .main-content p {
+    margin-bottom: 1rem;
+  }
+
+
+
+  .real-content {
+    max-width: 800px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+  
+  /* Footer Styles */
+  .site-footer {
+    background-color: #111;
+    padding: 1rem;
+    text-align: center;
+    border-top: 2px solid #666;
+    margin-top: 1rem;
+  }
+  
+  .site-footer a {
+    color: #bbb;
+    text-decoration: none;
+    margin: 0 0.5rem;
+  }
+  
+  .site-footer a:hover {
+    color: #fff;
+  }
+
+
+  /* light mode*/ 
+
+  /* Light Mode */
+body.light-mode {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Change other elements accordingly */
+.light-mode .site-header {
+    background-color: #f4f4f4;
+    border-bottom: 2px solid #ddd;
+}
+
+.light-mode .main-nav {
+    background-color: #eaeaea;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.light-mode .sidebar {
+    background-color: #f8f8f8;
+    border-right: 1px solid #ddd;
+}
+
+.light-mode .site-footer {
+    background-color: #eaeaea;
+    border-top: 2px solid #ccc;
+}
+
+.light-mode .main-nav a {
+    color: #333;
+}
+
+.light-mode .main-nav a:hover {
+    background-color: #ddd;
+    color: #000;
+}
+  

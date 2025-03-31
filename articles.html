@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lunatic Webzine</title>
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Banner / Header -->
+  <header class="site-header">
+    <!-- Replace this with your own banner or logo image -->
+    <img src="img/alflfendsd.jpg" alt="alflfends" class="header-img">    
+    <img src="img/lunaticrb.jpg" alt="Darkside Logo" class="site-logo">
+    <button id="theme-toggle">Toggle Theme</button>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Articles</a></li>
+      <li><a href="#">Interviews</a></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#">RIP</a></li>
+      <li><a href="#">Playlists</a></li>
+      <li><a href="#">Info</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content Wrapper -->
+  <div class="content-wrapper">
+
+    <!-- Sidebar / Left Column -->
+    <aside class="sidebar">
+      <!-- Search Box -->
+      <div class="search-box">
+        <h3>Search</h3>
+        <input type="text" placeholder="Search...">
+        <select>
+          <option value="all">All categories</option>
+          <option value="albums">Articles</option>
+          <option value="compilations">Interviews</option>
+          <option value="dvds">Events</option>
+          <option value="zines">Photos</option>
+          <option value="interviews">Interviews</option>
+          <!-- more categories here -->
+        </select>
+        <button>Go!</button>
+      </div>
+
+      <!-- Categories List -->
+      <div class="categories">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="articles.html">Articles</a></li>
+
+          <!-- in progress -->
+          <li><a href="interviews.html">Interviews</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="articles.html">Articles (34)</a></li>
+          <li><a href="photos.html">Photos</a></li>
+          <li><a href="playlists.html">Playlists (23)</a></li>
+          <li><a href="rip.html">RIP (xxx)</a></li> 
+        </ul>
+      </div>
+      
+
+      <!-- Latest Updates (Optional) -->
+      <div class="latest-updates">
+        <h3>Latest Updates</h3>
+        <ul>
+          <li><a href="#">Mar 18, 2025 - New Interview Posted</a></li>
+          <li><a href="#">Mar 17, 2025 - Album Review</a></li>
+          <li><a href="#">Mar 15, 2025 - Tourdates Updated</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content / Right Column -->
+    <main class="main-content" id="main-content">
+        
+      <!-- Add more news posts here -->
+    </main>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>
+      &copy; 2025 Lunatic Webzine. All rights reserved. 
+      | <a href="#">Privacy Policy</a> | <a href="#">Cookie Settings</a>
+    </p>
+  </footer>
+
+  <!-- loading content -->
+  <script src="js/loadContent.js"></script>
+  <script>
+    loadContent('articles/sample2.html');
+  </script>
+
+</body>
+</html>
